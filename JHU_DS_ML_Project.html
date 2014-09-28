@@ -120,7 +120,7 @@ training.clean.cv.nzc &lt;- training.clean.cv[, colnames(training.clean.cv) %in%
 testing.clean.cv.nzc &lt;- testing.clean.cv[, colnames(testing.clean.cv) %in% 
                                            rownames(nzc.ni)[nzc.ni$nzv == FALSE]]</code></pre>
 <p>As it turns out, NZC does not remove any predictors from consideration as compared to the training set; therefore, all predictors in the training data are sufficiently variable in comparison to each other by this measure.</p>
-<p><em>Option 2</em>: To consider another way to select predictors, Principal Components Analysis (PCA) is used to collapse the clean training data’s predictors to weighted combinations. This set will be used to train a variety of models and compare the performance of those models against that of models trained with the clean training set, allowing me to determine which method of predictor selection is best for this problem.</p>
+<p><em>Option 2</em>: To consider another way to select predictors, Principal Components Analysis (PCA) is used to collapse the clean training data’s predictors to weighted combinations. This PCA set will be used to train two models and compare the performance of those models against that of models trained with the clean training set, allowing me to determine which method of predictor selection is best for this problem.</p>
 <pre class="r"><code>set.seed(19428)
 pre.proc.cv &lt;- preProcess(training.clean.cv[, 3:54], method = &quot;pca&quot;, thresh = 0.8)
 ## create training data of PCA predictors
