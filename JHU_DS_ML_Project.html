@@ -163,7 +163,7 @@ mod.fit.pca.b &lt;- train(classe ~ ., method = &quot;gbm&quot;, data = training.
 ## Model 4: PCA data, random forest approach
 mod.fit.pca.rf &lt;- train(classe ~ ., method = &quot;rf&quot;, data = training.clean.cv.pca, 
                         prox = TRUE)</code></pre>
-<p>With the completion of four different models, the researcher concluded the cross validation portion of model building. Recall that the researcher created a training set and validation set of data from the original training corpus with a 75% split. With the validation set, the researcher determined estimates for the out-of-sample error for each model option and selected the approach with the lowest error to train the final model on the entirety of the training corpus.</p>
+<p>With the completion of four different models, I set-up the cross validation portion of model building. Recall that I created a training set and validation set of data from the original training corpus with a 75% split. With the validation set, I determined estimates for the out-of-sample error for each model option and selected the approach with the lowest error as the final model on which to predict with the test set.</p>
 <pre class="r"><code>## Model 1: predictions and confusion matrices
 pred.fit.1.is &lt;- predict(mod.fit.all.b, newdata = training.clean.cv)
 pred.fit.1 &lt;- predict(mod.fit.all.b, newdata = testing.clean.cv)
