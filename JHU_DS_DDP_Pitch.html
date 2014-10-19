@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amoritization Simulator Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Amoritization Simulator Application">
+  <meta name="author" content="Ryan M. Swartz">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Amoritization Simulator Application</h1>
+    <h2>Simulate a monthly payment and reduced interest</h2>
+    <p>Ryan M. Swartz<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why do this?</h2>
+  </hgroup>
+  <article data-timings="">
+    <blockquote>
+<q>Owning a home is a keystone of wealth -  
+both financial affluence and emotional security</q>
+</blockquote>
+
+<p><strong>Suze Orman</strong></p>
+
+<blockquote>
+<q>The most powerful force in the universe is <b>compound interest</b></q>
+</blockquote>
+
+<p><strong>Albert Einstein</strong></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Find the monthly payment</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>With user input for home price, percent down, interest rate, and term length we can determine the monthly payment</li>
+<li>The following walks through an example for a $500,000 home where the buyer put 20% down and receives a 30-year loan at 3.75% APR</li>
+</ul>
+
+<pre><code class="r">price &lt;- 500000; per.down &lt;- 0.2; rate &lt;- 0.0375 / 12; n &lt;- 30 * 12
+monthly.payment &lt;- (rate * price * (1 - per.down) * ((1 + rate)^n)) / (((1 + rate)^n) - 1); monthly.payment
+</code></pre>
+
+<pre><code>## [1] 1852
+</code></pre>
+
+<ul>
+<li>To determine the interest they will pay over the life of the loan, we use the following</li>
+</ul>
+
+<pre><code class="r">base.total.interest &lt;- (monthly.payment * n) - (price * (1 - per.down)); base.total.interest
+</code></pre>
+
+<pre><code>## [1] 266886
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Reducing the interest owed</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>One way to reduce the estimated interest cost over the life of the loan is to chip in extra principal with the monthly payment</li>
+<li>If this homeowner contributes an extra $200 each month with his or her payment, they can cut their interest cost significantly as interest owed is a function of how much principal is left on the loan</li>
+<li>They will also pay off the loan sooner</li>
+</ul>
+
+<pre><code class="r">extra &lt;- 200
+new.n &lt;- log(((monthly.payment + extra) / rate) / (((monthly.payment + extra) / rate) - (price * (1 - per.down)))) / log(1 + rate)
+new.interest &lt;- ((monthly.payment + extra) * new.n) - (price * (1 - per.down))
+interest.savings &lt;- base.total.interest - new.interest; interest.savings
+</code></pre>
+
+<pre><code>## [1] 49127
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The interest cost of a home mortgage is significant due to the power of compounding interest, but paying in extra principal can reduce this cost over the life of the loan</li>
+<li>To reap this benefit, decide what you can afford to contribute each month, and use the Amoritization Simulator application to determine exactly how much money that will save you</li>
+<li>With the application, you could also factor in other variables to reduce the interest cost such as refinancing (getting a lower interest rate), putting in a greater portion of the price as a down payment, and selecting a shorter loan term</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Why do this?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Find the monthly payment'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Reducing the interest owed'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
