@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>IS THERE A RELATIONSHIP BETWEEN A PERSON&#39;S AFFLUENCE AND THEIR OPINION ON GOVERNMENT SPENDING FOR HEATLHCARE?</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<!-- Make sure that the knitr package is installed and loaded. -->
+
+<!-- For more info on the package options see http://yihui.name/knitr/options -->
+
+<!-- Replace below with the title of your project -->
+
+<h3>IS THERE A RELATIONSHIP BETWEEN A PERSON&#39;S AFFLUENCE AND THEIR OPINION ON GOVERNMENT SPENDING FOR HEATLHCARE?</h3>
+
+<!-- Enter the code required to load your data in the space below. The data will be loaded but the line of code won't show up in your write up (echo=FALSE) in order to save space-->
+
+<!-- In the remainder of the document, add R code chunks as needed -->
+
+<h3>Introduction:</h3>
+
+<p>For many in the United States (U.S.), the subject of Government spending has long been a polarizing topic. Often, polarization occurs around the decision of whether or not this spending is too much or too little, and if that spending (regardless of level) goes towards worthwhile efforts. With the passage of the Affordable Care Act in 2010, the level of Government attention and spending on the healthcare of US citizens became one of the most hotly debated issues in the country, which continues to this day.</p>
+
+<p>This study seeks to determine what relationship, if any, exists between the affluence of a person and their opinion on Government involvement in healthcare as a means to understand what may be driving some of the polarity on this subject. With a better understanding of some of the reasons for disagreement, lawmakers and other leaders may begin to address the rift in opinion and find a position of compromise on this subject with the American public.</p>
+
+<h3>Data:</h3>
+
+<p>To test for a relationship between a person&#39;s affluence and their opinion on Government spending on healthcare, this study will utilize results from the General Social Survey (GSS). These data were collected as part of a comprehensive survey of United States residents by the National Opinion Research Center between 1972 and 2012 to provide a measure of Americans&#39; opinion on a variety of issues, as well as characteristics about the respondents&#39; lives (such as employment status, level of education, marital status, etc.). To ensure a representative random sample, survey takers utilized a modified probability approach and quota elements at the block level.  Both of these methods are in accordance with National Science Foundation standards for random representative samples.</p>
+
+<p>For this analysis, the results of interest from the GSS are cases in which a respondent has provided both their family&#39;s level of income in constant dollars (the variable &#39;coninc&#39;) and their opinion on the amount of Government spending aimed at improving and protecting the nation&#39;s health (the variable &#39;natheal&#39;). There are 29,094 cases that contain values for both variables in the dataset.</p>
+
+<p>The level of income is a numerical variable measuring the affluence of the respondent&#39;s family with inflation effects normalized. The opinion on Government spending on the Nation&#39;s health is an ordinal categorical variable of three categories.</p>
+
+<p>This is an observational study taking advantage of the GSS longitudinal data profiling United States residents&#39; (the population of interest) opinions on a variety of questions. This is not an experimental study as the survey takers did not institute controls over variables.</p>
+
+<p>Since the methodology of the survey was consistent with random sampling techniques accounting for proportions of all different segments of population to ensure accurate representation of U.S. residents, the results of this study may be generalized to the overall population of U.S. residents.</p>
+
+<p>The survey respondents accounted for several possibilities of bias:</p>
+
+<ul>
+<li>disproportionate representation of groups of U.S. residents: the researchers used a modified probability approach and quota elements at the block level to survey a true cross-section of residents from various societal groupings</li>
+<li>non-responses: to mitigate the bias of non-response, survey takers only sought responses on weekends, holidays, or after 3:00PM on workdays</li>
+<li>non-English speaking respondents: researchers conducted the survey in English and Spanish for the significant amount of Spanish-speaking populations within the U.S.</li>
+</ul>
+
+<p>Finally, since this study only takes the relationship between two variables (family income in constant dollars and opinion on government spending to improve or protect health) into account, and there are most certainly confounding variables affecting this relationship, we cannot rely upon the outcome of this study to establish a causal link between the variables.  For instance, the political views variable may affect the survey respondents&#39; opinion on level of government spending to protect or improve health in addition to their family income.  With the presences of such confounders, any relationship between the two variables of the study may be considered correlation but not causation. One needs experimental data, with external/confounding variable control, to determine such a relationship.</p>
+
+<pre><code class="r"># subset GSS data set to only variables of interest
+StudyVars &lt;- c(&quot;coninc&quot;, &quot;natheal&quot;)
+StudyGSS &lt;- gss[StudyVars]
+# subset data further to only valid cases (i.e., where both coninc and
+# natheal have values other than NA)
+SubStudyGSS &lt;- subset(StudyGSS, !is.na(coninc) &amp; !is.na(natheal))
+</code></pre>
+
+<h3>Exploratory data analysis:</h3>
+
+<p>To begin working with this data, we take a look at some basic information on the data set:</p>
+
+<pre><code class="r"># summarize the data
+summary(SubStudyGSS)
+</code></pre>
+
+<pre><code>##      coninc              natheal     
+##  Min.   :   383   Too Little :19396  
+##  1st Qu.: 18445   About Right: 7987  
+##  Median : 35722   Too Much   : 1711  
+##  Mean   : 43945                      
+##  3rd Qu.: 58849                      
+##  Max.   :180386
+</code></pre>
+
+<p>Immediately, we note that the vast majority of respondents believe the Government either spends too little or just the right amount on improving and protecting the Nation&#39;s health, with only a small minority thinking the Government spends too much. The income data demonstrates a general right-skew with the median less than the mean value and the large range between 75th and 100th percentile of data. For a closer look at this by category, we present a boxplot of the data:</p>
+
+<pre><code class="r">ggplot(SubStudyGSS, aes(natheal, coninc)) + geom_boxplot(aes(fill = natheal)) + 
+    scale_color_discrete(name = &quot;Opinion&quot;) + labs(title = &quot;Opinion on Government Spending on Health v. Income&quot;, 
+    x = &quot;Opinion on Amount of Gov&#39;t Spending on Health&quot;, y = &quot;Family Income [constant USD]&quot;)
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-4"/> </p>
+
+<p>The boxplot allows us to expand on our earlier right-skewed conclusion to note that all opinion categories&#39; income data is right skewed. With this income data now separated by category, we also note that the median income in constant dollars for survey respondents who believe the Government spends too much improving or protecting the Nation&#39;s health is higher than income data in other categories. This may suggest a relationship a statistically significant difference in the income of respondents and their opinion on this healthcare spending. </p>
+
+<h3>Inference:</h3>
+
+<p>To determine if there is a relationship between income and opinion on Government healthcare spending, we will run a hypothesis test comparing the mean income of respondents based upon their income (ANOVA test), then pairwise comparisons of each opinion group&#39;s mean income if the hypothesis test returns a statistically significant difference in the means to determine which means are different (T-tests).</p>
+
+<p>The hypotheses for this test are then:
+H0: the mean income is equal across all opinion groups (meanTL = meanAR = meanTM)
+HA: the mean income differs for at least one opinion group</p>
+
+<p>Before testing these hypotheses, we must check the conditions of use for ANOVA:</p>
+
+<p>1) Independence</p>
+
+<ul>
+<li>Within Groups: observations are independent per the random sampling methodology of the survey</li>
+<li>Between Groups: observations are independent per the random sampling methodology of the survey</li>
+</ul>
+
+<p>2) Approximate Normality</p>
+
+<ul>
+<li>Each group&#39;s distribution appears to be nearly normal, with the large sample sizes sufficient enough to overcome any skew</li>
+</ul>
+
+<p>3) Equal Variance</p>
+
+<ul>
+<li>The variances for each group appear to be roughly equal from the earlier boxplot; this is especially important given the disparity in sample size between the groups</li>
+</ul>
+
+<p>As earlier stated, we will use an ANOVA test to determine if the mean income level varies across groups expressing different opinions on the amount of Government spending on healthcare. We use ANOVA because we are comparing one numerical variable (income) with one categorical variable (opinion) with more than two groupings. The ANOVA test will generate a measure of the variability between groups over the variability within groups as a way to determine if the means are significantly different and if the groupings offer a statisically valid relationship for that variability. If this test results in evidence of a statistically significant variation in the mean income between one or more groups, we will perform a T-test for the mean income for each possible pairwise comparison of two groups to determine which groups have the different means.</p>
+
+<pre><code class="r"># perform ANOVA and summarize results
+IncomeANOVA &lt;- aov(coninc ~ natheal, data = SubStudyGSS)
+ANOVATable &lt;- anova(IncomeANOVA)
+ANOVATable
+</code></pre>
+
+<pre><code>## Analysis of Variance Table
+## 
+## Response: coninc
+##              Df   Sum Sq  Mean Sq F value  Pr(&gt;F)    
+## natheal       2 7.28e+10 3.64e+10    29.8 1.1e-13 ***
+## Residuals 29091 3.55e+13 1.22e+09                    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+</code></pre>
+
+<p>With such a large F leading to a very small p-value (&lt; alpha = 0.05 significance), we can reject the H0 and conclude that at least one mean income is statistically different across opinion categories.  With that conclusion, we set about to compare the means among groups for statistically significant difference with T-tests. For each of these tests, we will judge significance using the adjusted significance alpha-star (Bonferroni Correction) to account error. For this study alpha-star is alpha=0.05/3 or 0.0167.</p>
+
+<pre><code class="r"># Subset income data by opinion category
+SubStudyIncTL &lt;- subset(SubStudyGSS, natheal == &quot;Too Little&quot;)
+SubStudyIncAR &lt;- subset(SubStudyGSS, natheal == &quot;About Right&quot;)
+SubStudyIncTM &lt;- subset(SubStudyGSS, natheal == &quot;Too Much&quot;)
+# record &#39;n&#39; for each category
+nTL &lt;- sum(SubStudyIncTL$natheal == &quot;Too Little&quot;)
+nAR &lt;- sum(SubStudyIncAR$natheal == &quot;About Right&quot;)
+nTM &lt;- sum(SubStudyIncTM$natheal == &quot;Too Much&quot;)
+# extract MSE value from table for SE calculations and dfE value for
+# T-test
+IncMSE &lt;- ANOVATable$&quot;Mean Sq&quot;[length(ANOVATable$&quot;Mean Sq&quot;)]
+dfE &lt;- ANOVATable$Df[length(ANOVATable$Df)]
+# set Null difference in mean income
+H0_Inc &lt;- 0
+</code></pre>
+
+<p><em>Compare income means for the &ldquo;Too Little&rdquo; (TL) category vs. the &ldquo;About Right&rdquo; (AR) category</em></p>
+
+<pre><code class="r"># this comparison has full commenting; subsequent comparisons will not
+# calculate point estimate for the difference in means
+PointTLvAR &lt;- mean(SubStudyIncTL$coninc) - mean(SubStudyIncAR$coninc)
+# calculate the Standard Error based on average variability between groups
+# (MSE) and n for each group
+SE_TLvAR &lt;- sqrt((IncMSE/nTL) + (IncMSE/nAR))
+# calculate the T statistic for comparison on TL and AR income means
+T_TLvAR &lt;- (PointTLvAR - H0_Inc)/SE_TLvAR
+# Calculate two-tail p-value for this comparison
+P_TLvAR &lt;- 2 * pt(abs(T_TLvAR), df = dfE, lower.tail = FALSE)
+# report result
+P_TLvAR
+</code></pre>
+
+<pre><code>## [1] 0.0002315
+</code></pre>
+
+<p>This low of a p-value for the comparison of mean income between those that think the Government spends &ldquo;Too Little&rdquo; on healthcare and those that believe the Government&#39;s level of spending is &ldquo;About Right&rdquo; allows us to conlude there is a significantly significant difference in the means between the two  opinion groups&#39; incomes (p-value = 0.0002 &lt; alpha-star of 0.0167).</p>
+
+<p><em>Compare income means for the &ldquo;Too Little&rdquo; (TL) category vs. the &ldquo;Too Much&rdquo; &trade; category</em></p>
+
+<pre><code class="r">PointTLvTM &lt;- mean(SubStudyIncTL$coninc) - mean(SubStudyIncTM$coninc)
+SE_TLvTM &lt;- sqrt((IncMSE/nTL) + (IncMSE/nTM))
+T_TLvTM &lt;- (PointTLvTM - H0_Inc)/SE_TLvTM
+P_TLvTM &lt;- 2 * pt(abs(T_TLvTM), df = dfE, lower.tail = FALSE)
+P_TLvTM
+</code></pre>
+
+<pre><code>## [1] 3.546e-13
+</code></pre>
+
+<p>With this p-value even smaller, we note that there is strong statistical evidence between the mean income of those who think the Government spends &ldquo;Too Little&rdquo; and those who think the Government spends &ldquo;Too Much&rdquo; on healthcare.</p>
+
+<p><em>Compare income means for the &ldquo;About Right&rdquo; (AR) category vs. the &ldquo;Too Much&rdquo; &trade; category</em></p>
+
+<pre><code class="r">PointARvTM &lt;- mean(SubStudyIncAR$coninc) - mean(SubStudyIncTM$coninc)
+SE_ARvTM &lt;- sqrt((IncMSE/nAR) + (IncMSE/nTM))
+T_ARvTM &lt;- (PointARvTM - H0_Inc)/SE_ARvTM
+P_ARvTM &lt;- 2 * pt(abs(T_ARvTM), df = dfE, lower.tail = FALSE)
+P_ARvTM
+</code></pre>
+
+<pre><code>## [1] 4.455e-07
+</code></pre>
+
+<p>Just as with the other two comparisons, there is a statistically significant difference in the mean income groups for these two opinion categories.</p>
+
+<h3>Conclusion:</h3>
+
+<p>In comparing the mean incomes of GSS survey respondents of varying opinion on the amount of Government spending to increase and protect the Nation&#39;s health, we determined (through an ANOVA test at the 0.05 significance level) that not only did one mean differ from others, but all means statistically varied from one another when following up the ANOVA test with a series of pairwise T-tests. This result leads us to conclude that there is correlation with U.S. residents&#39; income level and their opinion on Government spending in this manner. For a visual depiction of the difference in mean income at the 95% confidence level, see the graph below:</p>
+
+<pre><code class="r">ggplot(MeanInc_Category, aes(x = Inc.mean, y = natheal)) + geom_point() + geom_errorbarh(aes(xmin = Lower, 
+    xmax = Upper), height = 0.3) + labs(title = &quot;Opinion on Government Spending on Health v. Mean Income&quot;, 
+    x = &quot;Mean Family Income C.I. [constant USD] @ 95% Confidence&quot;, y = &quot;Opinion on Amount of Gov&#39;t Spending on Health&quot;)
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-11"/> </p>
+
+<p>With this information, those seeking to justify or publicize Government spending on healtcare can target messages to U.S. residents of varying income levels to either win support (in the case of those with higher incomes) or advertise increased investment (in the case of those with lower incomes) to possibly bring the two opinions closer together and reduce the issue&#39;s polarity.</p>
+
+<h3>References:</h3>
+
+<p>Smith, Tom W., Michael Hout, and Peter V. Marsden. General Social Survey, 1972-2012 [Cumulative File]. ICPSR34802-v1. Storrs, CT: Roper Center for Public Opinion Research, University of Connecticut /Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributors], 2013-09-11. doi:10.3886/ICPSR34802.v1</p>
+
+<p>Persistent URL: <a href="http://doi.org/10.3886/ICPSR34802.v1">http://doi.org/10.3886/ICPSR34802.v1</a></p>
+
+<p>Dataset URL: <a href="http://bit.ly/dasi_gss_data">http://bit.ly/dasi_gss_data</a></p>
+
+<h3>Appendix - Data Sample:</h3>
+
+<pre><code class="r"># the first 25 cases in the study are presented here for reference
+SubStudyGSS[1:25, ]
+</code></pre>
+
+<pre><code>##      coninc     natheal
+## 1614  44643  Too Little
+## 1615  26786  Too Little
+## 1616  44643  Too Little
+## 1617  44643 About Right
+## 1618  44643 About Right
+## 1619  44643 About Right
+## 1620  16071 About Right
+## 1621  26786  Too Little
+## 1622   7143  Too Little
+## 1623  62500  Too Little
+## 1624  19643 About Right
+## 1625  80357 About Right
+## 1626  12500    Too Much
+## 1627  62500  Too Little
+## 1628  44643  Too Little
+## 1629  19643  Too Little
+## 1630  62500  Too Little
+## 1631  16071  Too Little
+## 1632  12500 About Right
+## 1634  12500    Too Much
+## 1635   1786  Too Little
+## 1636  62500  Too Little
+## 1637  12500  Too Little
+## 1638  19643 About Right
+## 1639  32143  Too Little
+</code></pre>
+
+</body>
+
+</html>
+
